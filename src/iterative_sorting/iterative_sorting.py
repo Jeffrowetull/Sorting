@@ -2,22 +2,11 @@
 def selection_sort( arr ):
     # loop through n-1 elements
     for i in range(0, len(arr) - 1):
-        cur_index = i
-        for j in range(i+1, len(arr)):
-            if arr[cur_index] > arr[j]:
-                cur_index = j
-        # TO-DO: find next smallest element
-        # (hint, can do in 3 loc) 
+        cur_index = i#establishes first index
+        for j in range(i+1, len(arr)):#the array besides the first
+            if arr[cur_index] > arr[j]:# if the first is greater than anything
+                cur_index = j#new starting point
         arr[i], arr[cur_index] = arr[cur_index], arr[i]
-             
-
-
-
-        # TO-DO: swap
-
-
-
-
     return arr
 
 listtt = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
